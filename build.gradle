@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.smyachenkov'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.0'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.0'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
+    testCompile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+}
